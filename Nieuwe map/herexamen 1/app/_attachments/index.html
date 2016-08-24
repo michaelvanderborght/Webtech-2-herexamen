@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My New CouchApp</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
-  </head>
-  <body>
-    <div id="account"></div>
-
-    <h1>Generated CouchApp</h1>
-
-    <div id="profile"></div>
-    <div id="items"></div>
-
-    <div id="sidebar">
-      <p>Edit welcome message.</p>
-      <p>Ideas: You could easily turn this into a photo sharing app, or a grocery list, or a chat room.</p>
-    </div>
+    <title>Gerechten</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <link rel='stylesheet' href='style/bootstrap.min.css' type='text/css'>
+   </head>
+   
+   <body>
+  <div class='well'>
+        <table class='table table-hover'>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                    <td colspan='3' align='center'>
+                    <h2>Plaats een bestelling</h2></td>
+                    </tr>
+                    <tr>
+                    <td colspan='3'> </td>
+                    </tr>
+                    <tr>
+                    <td>Gerecht</td>
+                    <td>
+					<select id='gerecht'>
+					  <option value="sushi">Sushi</option>
+					  <option value="sashimi">Sashimi</option>
+					  <option value="shabu shabu">Shabu shabu</option>
+					  <option value="sukiyaki">Sukiyaki</option>
+					  <option value="nikujaga">Nikujaga</option>
+					  <option value="tonkatsu">Tonkatsu</option>
+					</select>
+					</td>
+                    </tr>
+                    <tr>
+                    <td>Hoeveelheid :  </td><td><input id='hoeveelheid' type='text' size='10'></td>
+                    </tr>
+                    <tr>
+                    <td>Tafel :</td><td><input id='tafel' type='text' size='10'></td>
+                    </tr>
+                    <tr>
+                    <td>Opmerkingen :</td><td><input id='opmerkingen' type='text' size='200'></td>
+                    </tr>
+                    <tr>
+                    <td>Tijd :</td><td><input id='tijd' type='text' size='50'></td>
+                    </tr>
+                    <tr>
+                        <td colspan='3' align='right'>
+                        <button type='button' class='btn btn-primary' onClick='createDoc()'>Ok</button>
+                        </td>
+                    </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>     
+  </div>
   </body>
-  <script src="vendor/couchapp/loader.js"></script>
-  <script type="text/javascript" charset="utf-8">
-    $.couch.app(function(app) {
-      $("#account").evently("account", app);
-      $("#profile").evently("profile", app);
-      $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
-      $("#items").evently("items", app);
-    });
-  </script>
 </html>
