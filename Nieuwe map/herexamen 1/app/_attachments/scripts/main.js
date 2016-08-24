@@ -1,5 +1,5 @@
 function createDoc(){
-	var gerecht = $("gerecht").val();
+	var gerecht = $("#gerecht").val();
 	var hoeveelheid = $("#hoeveelheid").val();
 	var tafel = $("#tafel").val();
 	var opmerkingen = $("#opmerkingen").val();
@@ -17,7 +17,7 @@ function createDoc(){
 	
 	$.ajax({
         type : 'PUT',
-        url : 
+        url : '../../' + gerecht + tijd,
         data : json,
         contentType : 'application/json',
         async : true,

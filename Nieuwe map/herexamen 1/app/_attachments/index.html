@@ -4,6 +4,9 @@
     <title>Gerechten</title>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <link rel='stylesheet' href='style/bootstrap.min.css' type='text/css'>
+    <script src='scripts/jquery.js'></script>
+    <script src='scripts/main.js'></script>
+    <script src='scripts/bootstrap.min.js'></script>
    </head>
    
    <body>
@@ -13,7 +16,7 @@
             <td>
                 <table>
                     <tr>
-                    <td colspan='3' align='center'>
+                    <td colspan='3'>
                     <h2>Plaats een bestelling</h2></td>
                     </tr>
                     <tr>
@@ -33,20 +36,20 @@
 					</td>
                     </tr>
                     <tr>
-                    <td>Hoeveelheid :  </td><td><input id='hoeveelheid' type='text' size='10'></td>
+                    <td>Hoeveelheid</td><td><input id='hoeveelheid' type='text' size='10'></td>
                     </tr>
                     <tr>
-                    <td>Tafel :</td><td><input id='tafel' type='text' size='10'></td>
+                    <td>Tafel</td><td><input id='tafel' type='text' size='10'></td>
                     </tr>
                     <tr>
-                    <td>Opmerkingen :</td><td><input id='opmerkingen' type='text' size='200'></td>
+                    <td>Opmerkingen</td><td><input id='opmerkingen' type='text' size='200'></td>
                     </tr>
                     <tr>
-                    <td>Tijd :</td><td><input id='tijd' type='text' size='50'></td>
+                    <td>Tijd</td><td><input id='tijd' type='text' size='50'></td>
                     </tr>
                     <tr>
-                        <td colspan='3' align='right'>
-                        <button type='button' class='btn btn-primary' onClick='createDoc()'>Ok</button>
+                        <td colspan='3'>
+                        <button type='button' class='btn btn-primary' onClick='createDoc()'>Plaats bestelling</button>
                         </td>
                     </tr>
                     </table>
@@ -55,4 +58,5 @@
         </table>     
   </div>
   </body>
+  
 </html>
