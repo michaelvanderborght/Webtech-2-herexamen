@@ -1,4 +1,9 @@
 class RecipesController < ApplicationController
+  def index
+      @test = Recipe.new("Sukiayki", "35",["beef", "tofu", "negi", "shungiku", "shiitake", "shiratake noodles"])
+      @test.addIngredients("beef")
+      @test.addIngredients("not beef")
+  end
 end
 
 class Recipe
@@ -10,18 +15,20 @@ class Recipe
   end
 
   def getPrice()
-    puts @price
+    return @price
   end
 
   def getName()
-    puts @name
+    return @name
   end
 
   def getIngredients()
-    puts @ingredients
+    return @ingredients
   end
 
   def addIngredients(ingredient)
+    if !(@ingredients.include? ingredient)
     @ingredients.push(ingredient)
+    end
   end
 end
