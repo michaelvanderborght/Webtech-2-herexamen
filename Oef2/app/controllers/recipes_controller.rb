@@ -1,8 +1,7 @@
 class RecipesController < ApplicationController
   def index
-      @test = Recipe.new("Sukiayki", "35",["beef", "tofu", "negi", "shungiku", "shiitake", "shiratake noodles"])
-      @test.addIngredients("beef")
-      @test.addIngredients("not beef")
+      @test = Recipe.new("Sukiyaki", 35,["beef", "tofu", "negi", "shungiku", "shiitake", "shiratake noodles"])
+
   end
 end
 
