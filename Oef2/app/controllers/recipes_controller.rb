@@ -9,8 +9,7 @@ class Recipe
   def initialize(name,price,ingredients)
     @name = name
     @price = price
-    @ingredients = Array.new
-    @ingredients.concat(ingredients)
+    @ingredients = ingredients    
   end
 
   def getPrice()
